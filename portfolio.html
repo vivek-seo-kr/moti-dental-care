@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTI Dental Care - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+        .faq-item.active .faq-content {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        #mobile-menu {
+            display: none;
+        }
+        #mobile-menu.active {
+            display: flex;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            950: '#042f2e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">M</div>
+                <span class="font-bold text-xl tracking-tight text-teal-900">MOTI Dental Care</span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium text-teal-800 hover:text-teal-600 transition-colors">Home</a>
+                <a href="#services" class="text-sm font-medium text-teal-800 hover:text-teal-600 transition-colors">Services</a>
+                <a href="#about" class="text-sm font-medium text-teal-800 hover:text-teal-600 transition-colors">About</a>
+                <a href="#reviews" class="text-sm font-medium text-teal-800 hover:text-teal-600 transition-colors">Reviews</a>
+                <a href="#faq" class="text-sm font-medium text-teal-800 hover:text-teal-600 transition-colors">FAQ</a>
+                <a href="#contact" class="text-sm font-medium text-teal-800 hover:text-teal-600 transition-colors">Contact</a>
+                <a href="tel:09459626569" class="flex items-center gap-2 bg-teal-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-teal-700 transition-all shadow-md">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Call Now
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-toggle" class="md:hidden text-teal-900 p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="absolute top-full left-0 right-0 bg-white border-t border-teal-50 shadow-xl p-6 md:hidden flex-col gap-4">
+            <a href="#home" class="mobile-link text-lg font-medium text-teal-900 hover:text-teal-600">Home</a>
+            <a href="#services" class="mobile-link text-lg font-medium text-teal-900 hover:text-teal-600">Services</a>
+            <a href="#about" class="mobile-link text-lg font-medium text-teal-900 hover:text-teal-600">About</a>
+            <a href="#reviews" class="mobile-link text-lg font-medium text-teal-900 hover:text-teal-600">Reviews</a>
+            <a href="#faq" class="mobile-link text-lg font-medium text-teal-900 hover:text-teal-600">FAQ</a>
+            <a href="#contact" class="mobile-link text-lg font-medium text-teal-900 hover:text-teal-600">Contact</a>
+            <div class="pt-4 border-t border-teal-50 flex flex-col gap-4">
+                <a href="tel:09459626569" class="flex items-center justify-center gap-2 bg-teal-600 text-white py-3 rounded-xl font-bold">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    094596 26569
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16 px-6 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-teal-50/30">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-teal-600/5 -skew-x-12 transform translate-x-24 z-0"></div>
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="flex flex-col gap-8">
+                <div class="inline-flex items-center gap-2 bg-teal-100 text-teal-800 px-4 py-1.5 rounded-full text-sm font-bold tracking-wide uppercase shadow-sm border border-teal-200/50 w-fit">
+                    <i data-lucide="star" class="w-4 h-4 fill-teal-800"></i>
+                    Top Rated Dental Clinic in Shimla
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-teal-950 leading-[1.1] tracking-tight">
+                    Your Smile <br>
+                    <span class="text-teal-600">Our Priority</span>
+                </h1>
+                <p class="text-lg md:text-xl text-teal-800/70 max-w-lg leading-relaxed font-medium">
+                    Experience world-class dental care at MOTI Dental Care. Located in the heart of Shimla, we provide gentle, professional, and affordable treatments for all your dental needs.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:09459626569" class="flex items-center justify-center gap-3 bg-teal-600 text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-teal-700 transition-all shadow-lg">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        Book Appointment
+                    </a>
+                    <a href="#services" class="flex items-center justify-center gap-2 bg-white text-teal-900 border-2 border-teal-100 px-8 py-4 rounded-2xl text-lg font-bold hover:bg-teal-50 transition-all shadow-sm">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white aspect-[4/5] md:aspect-square">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepYE4wDH9WP432WDUpa83Xmer2q-o4uyYGjgf5gtsJOR0-6d_Gm9k1pyDDCBnXUeZ15m6bgxdGXtxFnMPQgvxQ2cLTlECXCiUCfcO3Ns0cIhi7x57485ZBg96Mfo238idXU0YHTzg=s1360-w1360-h1020-rw" alt="MOTI Dental Care Clinic" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+                <div class="max-w-2xl">
+                    <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-4">Our Services</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-teal-950 leading-tight">
+                        Comprehensive Dental Care <br>
+                        <span class="text-teal-800/40">For Every Patient</span>
+                    </h3>
+                </div>
+                <p class="text-lg text-teal-800/60 max-w-md font-medium">
+                    We offer a wide range of dental services using the latest technology and techniques to ensure the best results for our patients.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group p-8 rounded-[2rem] border-2 border-teal-50 hover:border-teal-100 hover:bg-teal-50/30 transition-all duration-300">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="stethoscope" class="w-8 h-8"></i></div>
+                    <h4 class="text-2xl font-bold text-teal-950 mb-4">General Dentistry</h4>
+                    <p class="text-teal-800/60 leading-relaxed font-medium mb-6">Routine checkups, cleanings, and preventative care to keep your smile healthy.</p>
+                </div>
+                <div class="group p-8 rounded-[2rem] border-2 border-teal-50 hover:border-teal-100 hover:bg-teal-50/30 transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="activity" class="w-8 h-8"></i></div>
+                    <h4 class="text-2xl font-bold text-teal-950 mb-4">Toothache Relief</h4>
+                    <p class="text-teal-800/60 leading-relaxed font-medium mb-6">Immediate and effective treatment for toothaches and dental emergencies.</p>
+                </div>
+                <div class="group p-8 rounded-[2rem] border-2 border-teal-50 hover:border-teal-100 hover:bg-teal-50/30 transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6"><i data-lucide="sparkles" class="w-8 h-8"></i></div>
+                    <h4 class="text-2xl font-bold text-teal-950 mb-4">Cosmetic Dentistry</h4>
+                    <p class="text-teal-800/60 leading-relaxed font-medium mb-6">Enhance your smile with teeth whitening, veneers, and other aesthetic treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-teal-50/50 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="relative">
+                <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white aspect-[3/4] md:aspect-square">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepbsepUwfRpFGA28A1H_i1zStvJPkXng2NZqqfOZrJx4vL5U_MD7KGsHrUxnhjFK7B4dcOfn1y8aDomQ47djnpLxmxkT5KqkOmrNJYWx7f63HzN4yr6kEubUSsbA6WtrWejeDI5=s1360-w1360-h1020-rw" alt="Dental Care Treatment" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent"></div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8">
+                <div>
+                    <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-4">About Us</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-teal-950 leading-tight mb-6">
+                        Trusted Dental Care <br>
+                        <span class="text-teal-800/40">In The Heart Of Shimla</span>
+                    </h3>
+                    <p class="text-lg text-teal-800/70 leading-relaxed font-medium mb-8">
+                        MOTI Dental Care is a leading dental clinic located in Middle Bazar, Shimla. Our well-qualified and soft-spoken doctor is dedicated to providing personalized dental treatments in a comfortable and friendly environment.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-teal-900 font-bold"><i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600"></i> Well-qualified and experienced doctor</div>
+                    <div class="flex items-center gap-3 text-teal-900 font-bold"><i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600"></i> Modern and hygienic clinic environment</div>
+                    <div class="flex items-center gap-3 text-teal-900 font-bold"><i data-lucide="check-circle-2" class="w-5 h-5 text-teal-600"></i> Soft-spoken and friendly staff</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-4">Patient Testimonials</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-teal-950 leading-tight">What Our Patients <span class="text-teal-800/40">Are Saying</span></h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-[2.5rem] bg-teal-50/50 border-2 border-teal-50 transition-all duration-300">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-6"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                    <p class="text-lg text-teal-900 font-medium leading-relaxed mb-8">"She is a well qualified doctor. I had some sittings with the doctor and I cured my toothache. She is a very softspoken person and she treated me with a very good behaviour."</p>
+                    <div class="font-extrabold text-teal-950">Jagdish Chand</div>
+                </div>
+                <div class="p-8 rounded-[2.5rem] bg-teal-50/50 border-2 border-teal-50 transition-all duration-300">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-6"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                    <p class="text-lg text-teal-900 font-medium leading-relaxed mb-8">"After asking a lot questions I got convinced and then treatment started. She is well trained dentist and clinic is also very nice."</p>
+                    <div class="font-extrabold text-teal-950">Ranjann Singh Rawat</div>
+                </div>
+                <div class="p-8 rounded-[2.5rem] bg-teal-50/50 border-2 border-teal-50 transition-all duration-300">
+                    <div class="flex items-center gap-1 text-yellow-500 mb-6"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                    <p class="text-lg text-teal-900 font-medium leading-relaxed mb-8">"Very nice clinic and very nice treatment best doctor ever."</p>
+                    <div class="font-extrabold text-teal-950">Raju Kanungo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-teal-50/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-4">Common Questions</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-teal-950 leading-tight">Frequently Asked <span class="text-teal-800/40">Questions</span></h3>
+            </div>
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-[2rem] border border-teal-100/50 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-8 py-6 flex items-center justify-between text-left hover:bg-teal-50/50 transition-colors">
+                        <span class="text-lg font-bold text-teal-950">What are your clinic timings?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-teal-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-8 pb-8 pt-2 text-teal-800/70 font-medium leading-relaxed border-t border-teal-50">
+                        MOTI Dental Care is open Monday to Saturday, typically closing at 7:00 PM. We recommend calling ahead to confirm the exact timings for the day.
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-[2rem] border border-teal-100/50 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-8 py-6 flex items-center justify-between text-left hover:bg-teal-50/50 transition-colors">
+                        <span class="text-lg font-bold text-teal-950">Where is the clinic located in Shimla?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-6 h-6 text-teal-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-8 pb-8 pt-2 text-teal-800/70 font-medium leading-relaxed border-t border-teal-50">
+                        We are located in Middle Bazar, The Mall, Shimla, Himachal Pradesh 171001, just below Hemraj Gaindamull.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+            <div class="flex flex-col gap-8">
+                <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-4">Contact Us</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-teal-950 leading-tight mb-6">Get In Touch <span class="text-teal-800/40">With Our Experts</span></h3>
+                <div class="grid gap-6">
+                    <div class="flex items-center gap-6 p-6 bg-teal-50 rounded-[2rem] border border-teal-100/50">
+                        <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center"><i data-lucide="phone" class="w-6 h-6"></i></div>
+                        <div>
+                            <div class="text-sm font-bold text-teal-800/40 uppercase tracking-wider mb-1">Phone</div>
+                            <div class="text-lg font-extrabold text-teal-950 leading-tight">094596 26569</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 p-6 bg-teal-50 rounded-[2rem] border border-teal-100/50">
+                        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                        <div>
+                            <div class="text-sm font-bold text-teal-800/40 uppercase tracking-wider mb-1">Address</div>
+                            <div class="text-lg font-extrabold text-teal-950 leading-tight">Middle Bazar, The Mall, Shimla</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-10 rounded-[3rem] shadow-2xl border border-teal-50 flex flex-col gap-8">
+                <h4 class="text-3xl font-extrabold text-teal-950 flex items-center gap-3">Get Directions <i data-lucide="map-pin" class="text-teal-600"></i></h4>
+                <p class="text-teal-800/60 font-medium">Visit us at our clinic in the heart of Middle Bazar, Shimla. We are conveniently located below Hemraj Gaindamull.</p>
+                <a href="https://maps.google.com/?q=MOTI+Dental+Care+Shimla+Middle+Bazar" target="_blank" class="w-full bg-teal-600 text-white py-5 rounded-2xl text-lg font-bold hover:bg-teal-700 transition-all shadow-lg flex items-center justify-center gap-3">
+                    <i data-lucide="external-link" class="w-6 h-6"></i> Open in Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-950 text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">M</div>
+                <span class="font-bold text-2xl tracking-tight">MOTI Dental Care</span>
+            </div>
+            <div class="text-teal-100/40 text-sm font-bold uppercase tracking-widest">© 2026 MOTI Dental Care. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
